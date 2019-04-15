@@ -9,7 +9,7 @@ import java.util.List;
 
 public class XmlDemo {
     public static void main(String[] args) throws DocumentException {
-        //创建SAXReader对象
+        //创建SAXReader对象 将xml文件内容加载到内存中
         SAXReader saxReader = new SAXReader();
         //将数据读取到dom对象
         Document document = saxReader.read("src/d3_annotation/xml/books.xml");
@@ -21,7 +21,7 @@ public class XmlDemo {
         for (Element book : elements) {
             //获取属性内容
             String author = book.attributeValue("author");
-            //根据元素名称获取元素的Element对象
+            //根据元素名称获取子元素的Element对象
             Element name = book.element("name");
             Element price = book.element("price");
             System.out.println(author + "---" + name .getText()+ "---" + price.getText());
