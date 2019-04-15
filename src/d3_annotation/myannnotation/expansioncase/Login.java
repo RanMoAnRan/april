@@ -23,7 +23,6 @@ public class Login {
         for (User user1 : userlist) {
             if (user1.getName().equals(username) && user1.getPwd().equals(password)) {
                 user = user1;
-
             }
         }
 
@@ -42,12 +41,10 @@ public class Login {
                 } else {
 
                     //通过反射调用方法
-
-                    Method method = null;
                     try {
                         Class<?> clazz = Class.forName("d3_annotation.myannnotation.expansioncase.QQFunction");
                         Object instance = clazz.newInstance();
-                        method = clazz.getMethod(choose);
+                        Method method = clazz.getMethod(choose);
 
                         //通过注解获取用户权限
 
@@ -57,7 +54,9 @@ public class Login {
                             Anno annotation = method.getAnnotation(Anno.class);
                             //获取注解值
                             String value = annotation.value();
+                            //判断用户权限是否包含注解内容
                             if (user.getList().contains(value)) {
+                                //调用方法
                                 method.invoke(instance);
                             } else {
                                 System.out.println("你没有权限访问此功能");
