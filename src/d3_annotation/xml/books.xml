@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books>
+    <book author="天蚕土豆">
+        <name>斗破苍穹</name>
+        <price>86</price>
+    </book>
+
+    <book author="靖哥">
+        <name>丫头</name>
+        <price>33</price>
+    </book>
+
+    <book author="萧潜">
+        <name>缥缈之旅</name>
+        <price>92</price>
+    </book>
+    <book author="萧鼎">
+        <name>诛仙</name>
+        <price>98</price>
+    </book>
+    <book author="天下霸唱">
+        <name>鬼吹灯</name>
+        <price>124</price>
+    </book>
+    <book author="辰东">
+        <name>神墓</name>
+        <price>128</price>
+    </book>
+</books>
