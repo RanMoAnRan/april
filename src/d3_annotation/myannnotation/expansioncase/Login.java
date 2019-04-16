@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 //登陆测试类
+@SuppressWarnings("all")
 public class Login {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException, ClassNotFoundException, InvocationTargetException {
 

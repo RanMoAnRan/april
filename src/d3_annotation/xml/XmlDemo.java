@@ -6,7 +6,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.util.List;
-
+//运用dom4j包解析xml文件
 public class XmlDemo {
     public static void main(String[] args) throws DocumentException {
         //创建SAXReader对象 将xml文件内容加载到内存中
