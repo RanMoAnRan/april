@@ -1,6 +1,5 @@
 package d1_thread;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -52,7 +51,6 @@ public class SynchronizedDemo implements Runnable {
 
     }
 
-
     public static void main(String[] args) {
 
         //普通创建线程对象的方式
@@ -84,6 +82,4 @@ public class SynchronizedDemo implements Runnable {
         executorService.shutdown();
 
     }
-
-
 }
