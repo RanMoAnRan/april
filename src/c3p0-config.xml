@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+    <!-- 使用默认的配置读取连接池对象 -->
+    <default-config>
+        <!--  1. 数据库的连接参数 -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/jdbctest</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+
+        <!-- 2. 连接池参数 -->
+        <!--初始连接数-->
+        <property name="initialPoolSize">5</property>
+        <!--最大连接数-->
+        <property name="maxPoolSize">10</property>
+        <!--等待多久以后抛出异常-->
+        <property name="checkoutTimeout">2000</property>
+    </default-config>
+
+    <!-- 命名配置 -->
+    <named-config name="otherc3p0">  <!--使用该命名配置则需要将该名字传入构造函数中不写参数则用的是默认的配置-->
+        <!--  连接参数 -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql:///c3p0test</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+
+        <!-- 连接池参数 -->
+        <property name="initialPoolSize">5</property>
+        <property name="maxPoolSize">8</property>
+        <property name="checkoutTimeout">1000</property>
+    </named-config>
+</c3p0-config>
